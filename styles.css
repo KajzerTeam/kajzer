@@ -422,3 +422,103 @@ outline: inherit;
     color: #667562;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Ustawienia dla małych ekranów */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        flex-direction: row;
+        position: relative;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .links-container {
+        flex-direction: row; /* Linki poziomo */
+        gap: 0.5rem;
+    }
+
+    .kajzer-logo {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    .hero-section {
+        flex-direction: column; /* Kolumnowy układ */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%; /* Pełna szerokość */
+    }
+
+    .text {
+        width: 100%; /* Tekst zajmuje całą szerokość */
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 100%; /* Zdjęcia na pełną szerokość */
+        margin-top: 10px;
+    }
+
+    .row {
+        flex-direction: column; /* Układ kolumnowy */
+    }
+
+    .milestones-box {
+        width: 100%; /* Pełna szerokość */
+    }
+
+    .statement {
+        font-size: 1rem;
+    }
+
+    .step-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .how-to-buy-section {
+        width: 100%; /* Sidebar zajmuje całą szerokość */
+        max-width: 100%; /* Usuń ograniczenie szerokości */
+        right: -100%; /* Zmiana pozycji startowej */
+        transition: right 0.4s ease; /* Płynne wysuwanie */
+    }
+
+    .how-to-buy-section.active {
+        right: 0; /* Pokaż Sidebar */
+    }
+
+    .sidebar-toggle {
+        font-size: 2rem; /* Zmniejszenie przycisku */
+        right: 0; /* Dopasowanie do mniejszego ekranu */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .kajzer-info, .kajzer-info-last {
+        font-size: 2rem;
+    }
+
+    .sidebar-toggle {
+        font-size: 2rem;
+    }
+
+    .how-to-buy-section h2 {
+        font-size: 2rem;
+    }
+}
