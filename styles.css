@@ -371,3 +371,6 @@ outline: inherit;
     max-height: 100%;
 }
 
+.disclaimer {
+    text-align: center;
+}
