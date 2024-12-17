@@ -374,3 +374,51 @@ outline: inherit;
 .disclaimer {
     text-align: center;
 }
+
+.why-kajzer-section {
+    margin: 0;
+    padding: 10px;
+
+}
+
+.why-kajzer-section h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.why-kajzer-container .container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+.statements-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.statements-box .image {
+    max-width: 30%;
+}
+
+.statements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+.statement {
+    border: 2px solid #FFC0CB;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 1.5rem;
+    color: #667562;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
