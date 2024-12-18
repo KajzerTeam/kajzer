@@ -522,3 +522,7 @@ outline: inherit;
         font-size: 2rem;
     }
 }
+
+html, body {
+overflow-x: hidden;
+}
