@@ -1,0 +1,425 @@
+@font-face {
+    font-family: "Kajzer";
+    src: url("./fonts/DK\ The\ Cats\ Whiskers.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kajzer";
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bar {
+    z-index: 500;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.kajzer-logo{
+    max-width: 220px;
+    max-height: 220px;
+    align-self: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-container i:hover {
+    cursor: pointer;
+}
+
+.dex-icon {
+    width: 2em;
+    height: 2em;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    color: black;
+}
+
+.hero-content {
+    max-width: 50%;
+    flex: 1;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    max-width: 40%;
+}
+
+.hero-kajzer-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Płynne przejście efektów */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtelny cień */
+}
+
+.hero-kajzer-image:hover {
+    transform: translateY(-15px); /* Mocniejsze unoszenie na hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start i koniec w tej samej pozycji */
+    }
+    50% {
+        transform: translateY(-5px); /* Unosi się w połowie cyklu */
+    }
+}
+
+/* MEET KAJZER */
+
+.meet-kajzer-section {
+    width: 100%; /* Rozciąga sekcję na całą szerokość strony */
+    background-color: #f8f8f8; /* Neutralne tło */
+    padding: 50px 0; /* Odstęp nad i pod sekcją */
+}
+
+/* Kontener treści */
+.meet-kajzer-section .container {
+    width: 80%; /* Ograniczenie szerokości treści */
+    max-width: 1200px; /* Maksymalna szerokość kontenera */
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+}
+
+/* Układ naprzemienny zdjęć i tekstu */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px; /* Odstęp między rzędami */
+}
+
+.text {
+    font-size: 2rem;
+    color: #3B3B3B;
+    width: 45%; /* Tekst zajmuje 45% szerokości */
+    line-height: 1.6;
+}
+
+.image {
+    width: 45%; /* Zdjęcie zajmuje 45% szerokości */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtelny cień */
+    object-fit: cover;
+}
+
+.row-odd {
+    flex-direction: row; /* Tekst po lewej, zdjęcie po prawej */
+}
+
+.row-even {
+    flex-direction: row-reverse; /* Tekst po prawej, zdjęcie po lewej */
+}
+
+.kajzer-info {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.kajzer-info-last {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Ukrywanie elementów przed przewinięciem */
+.scroll-item {
+    opacity: 0; /* Element niewidoczny */
+    transform: translateY(50px); /* Lekko przesunięty w dół */
+    transition: all 0.6s ease-in-out; /* Płynna animacja wejścia */
+}
+
+/* Gdy element jest widoczny w oknie przeglądarki */
+.scroll-item.in-view {
+    opacity: 1; /* Element widoczny */
+    transform: translateY(0); /* Element na miejscu */
+}
+
+
+/* MILESTONES */
+
+.milestones-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FFFFFF; /* Tło sekcji */
+    font-family: 'Kajzer', sans-serif;
+}
+
+.journey-title {
+    font-size: 2.8rem; /* Większy nagłówek */
+    font-weight: bold;
+    color: #3B3B3B; /* Ciemny brązowy tekst */
+    margin-bottom: 20px;
+}
+
+.milestones-box {
+    background: linear-gradient(45deg, #7BA05B, #A3C9A8); /* Gradient w tle */
+    border-radius: 15px;
+    padding: 20px 30px; /* Zmniejszony padding */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.milestone {
+    margin-bottom: 15px; /* Zmniejszony odstęp między milestone'ami */
+}
+
+.milestone h3 {
+    font-size: 1.8rem; /* Większy tekst dla nagłówków */
+    color: #FFC0CB; /* Różowy dla nagłówków */
+    margin-bottom: 8px; /* Mniejszy odstęp pod nagłówkiem */
+}
+
+.milestone p {
+    font-size: 1.2rem; /* Większy tekst dla opisów */
+    color: #D5E8D4; /* Jaśniejszy zielony dla opisu */
+    margin-bottom: 10px;
+}
+
+.how-to-buy-section {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: -1080px; /* Initially hidden off-screen */
+    width: 100%;
+    max-width: 1080px; /* Sidebar width */
+    height: 100%;
+    background-color: white;
+    color: black;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Smooth sliding */
+    z-index: 999;
+}
+
+.how-to-buy-section h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+/* Active Sidebar */
+.how-to-buy-section.active {
+    right: 0; /* Bring the sidebar fully into view */
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: fixed;
+    top: 50%;
+    right: 0px; /* Initially placed outside */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate text vertically */
+    z-index: 1000;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: right 0.3s ease; /* Smooth button movement */
+}
+
+/* Button relative to active sidebar */
+.how-to-buy-section.active .sidebar-toggle {
+    right: 1080px; /* Positioned on the sidebar's left edge */
+}
+
+.sidebar-toggle {
+background: none;
+color: inherit;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;
+}
+
+
+.sidebar-toggle::before {
+    content: attr(data-tooltip); /* Pobiera tekst z atrybutu HTML */
+    position: absolute;
+    left: 70%; /* Przesuwa tooltip na prawo od łapki */
+    top: 30%; /* Centrowanie tooltipa w pionie */
+    transform: translateY(-50%) translateX(10px); /* Delikatne przesunięcie w prawo */
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+    pointer-events: none;
+    rotate: 90deg;
+}
+
+/* Efekt pojawienia się tooltipa */
+.sidebar-toggle:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(14px); /* Delikatne przesunięcie */
+}
+
+/* Strzałka (trójkąt) tooltipa */
+.sidebar-toggle::after {
+    content: "";
+    position: absolute;
+    left: calc(100% - 2px); /* Strzałka zaraz przy krawędzi */
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.8); /* Tworzy trójkąt */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+/* Pokazanie strzałki */
+.sidebar-toggle:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+
+.steps-container {
+    text-align: initial;
+    padding: 20px;
+    text-align: left;
+}
+
+.step {
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.step-details {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.step-image {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+}
+
+.step-text h3 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: #F5A9B8;
+    
+}
+
+.step-text p {
+    font-size: 1.7rem;
+    margin: 5px 0 0;
+    color: #667562;
+}
+
+.milestones-box {
+    position: relative;
+}
+
+.milestones-image {
+    position: absolute;
+    top: 34%;
+    right: -9%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.disclaimer {
+    text-align: center;
+}
+
+.why-kajzer-section {
+    margin: 0;
+    padding: 10px;
+
+}
+
+.why-kajzer-section h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.why-kajzer-container .container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+.statements-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.statements-box .image {
+    max-width: 30%;
+}
+
+.statements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+.statement {
+    border: 2px solid #FFC0CB;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 1.5rem;
+    color: #667562;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
